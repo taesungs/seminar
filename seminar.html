@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WAF 세미나</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Noto Sans KR', sans-serif; background-color: #f2f2f2; color: #333; }
+    .wrapper { width: 100%; max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+    /* 헤더 */
+    .header {
+      position: relative;
+      background: url('https://taesungs.github.io/seminar/aws-purple-bg.png') no-repeat center center;
+      background-size: cover;
+      padding: 40px 20px;
+      border-radius: 8px 8px 0 0;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .header-content { flex: 1 1 auto; margin-left: 100px; }
+    .header-content h1 { font-size: 36px; font-weight: 700; color: #fff; margin-bottom: 12px; }
+    .event-info { font-size: 14px; color: rgba(255,255,255,0.85); line-height: 1.6; }
+    .event-info span { display: inline-block; margin-right: 8px; }
+    .btn-register {
+      background-color: #99ccff;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      margin-left: auto;
+    }
+
+    /* 본문 */
+    .main { background-color: #fff; padding: 40px 30px; margin-top: -20px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); line-height: 1.6; }
+    .section { margin-top: 30px; }
+    .section h2 { font-size: 20px; font-weight: 700; color: #333; margin-bottom: 15px; border-bottom: 2px solid #f0f0f0; padding-bottom: 5px; }
+    .section p { font-size: 15px; margin-bottom: 16px; }
+
+    /* Agenda */
+    .agenda-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; }
+    .agenda-title { font-size: 20px; font-weight: 700; display: flex; align-items: center; color: #333; }
+    .agenda-title::before { content: "⏰"; font-size: 22px; margin-right: 8px; }
+    .agenda-note { font-size: 12px; color: #777; }
+    table.agenda { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    table.agenda th, table.agenda td { border: 1px solid #ddd; padding: 12px; text-align: center; font-size: 14px; vertical-align: middle; }
+    table.agenda th { background-color: #f9f9f9; color: #555; font-weight: 500; }
+    .time { font-weight: 600; }
+    .speaker { display: block; margin-top: 4px; font-size: 13px; color: #ff9900; }
+
+    /* Information */
+    .info-section {
+      background: url('https://taesungs.github.io/seminar/aws-bg.png') no-repeat center center;
+      background-size: cover;
+      padding: 40px 20px;
+      border-radius: 0 0 8px 8px;
+      margin-top: 40px;
+    }
+    .info-section h2 { color: #fff; font-size: 16px; margin-bottom: 16px; }
+    .info-list { list-style: disc inside; }
+    .info-list li { font-size: 14px; color: #fff; margin-bottom: 8px; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-content { margin-left: 0; margin-bottom: 20px; }
+      .header-content h1 { font-size: 28px; }
+      .event-info { font-size: 12px; }
+      .btn-register { margin-top: 10px; padding: 10px 20px; font-size: 13px; }
+      .main { padding: 20px 15px; margin-top: -10px; }
+      .section h2 { font-size: 18px; }
+      .section p { font-size: 14px; }
+      table.agenda th, table.agenda td { padding: 8px; font-size: 12px; }
+    }
+    @media (max-width: 480px) {
+      .header { padding: 30px 15px; }
+      .header-content h1 { font-size: 24px; }
+      .agenda-title { font-size: 18px; }
+      .agenda-title::before { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- 헤더 -->
+    <header class="header">
+      <div class="header-inner">
+        <div class="header-content">
+          <h1>Best practices for web application security</h1>
+          <div class="event-info">
+            <span>📅 2025년 5월 19일(월) 오후 1시 – 5시</span><br>
+            <span>📍 서울 강남구 테헤란로 231 센터필드 EAST 18층 집현전 교육장 (301호)</span>
+          </div>
+        </div>
+        <a href="#" class="btn-register">등록하기≫≫≫</a>
+      </div>
+    </header>
+
+    <!-- 본문 -->
+    <section class="main">
+      <div class="section">
+        <h2>세미나 안내</h2>
+        <p>오는 5월 19일(월), AWS Edge Services Specialist SA들이 직접 발표 및 시연하는 <strong>AWS Best practices for web application security</strong> 세미나에 초대합니다.</p>
+        <p><strong>AWS WAF</strong>, <strong>AWS Shield Advanced</strong>, <strong>Amazon CloudFront</strong> 등 <strong>AWS Edge Services</strong>를 활용하여 지능적으로 진화하는 웹 위협(봇, 크리덴셜 스터핑 및 크래킹, DDoS 등)으로부터 귀사의 워크로드를 보호할 수 있는 실제적인 방안을 소개합니다.</p>
+        <p>평소 AWS의 WAF나 Shield 등 경계 보안 (Perimeter Protection) 서비스를 사용하셨거나, 관심이 있으신 고객분들께서는 향후 각 보안 서비스의 발전 방향, 보안 모범 사례, 고객 사례 등을 참고하실 수 있습니다.</p>
+        <p>아무쪼록 동 행사를 통해 비즈니스 혁신 및 새로운 전략 수립에 도움이 될 수 있는 통찰력을 얻어 가시길 바랍니다.</p>
+      </div>
+
+      <div class="section">
+        <div class="agenda-header">
+          <div class="agenda-title">Agenda</div>
+          <div class="agenda-note">* 아젠다는 추후 변경될 수 있습니다.</div>
+        </div>
+        <table class="agenda">
+          <thead>
+            <tr><th>Time</th><th>Session</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="time">13:00 - 13:10</td>
+              <td>오프닝<br><span class="speaker">김형탁 / Core Services Lead</span></td>
+            </tr>
+            <tr>
+              <td class="time">13:10 - 14:40</td>
+              <td>안전한 웹 애플리케이션 구축을 위한 AWS Edge Services 실전 가이드<br><span class="speaker">이갑인 / Sr. Edge Specialist SA</span></td>
+            </tr>
+            <tr>
+              <td class="time">14:40 - 15:00</td>
+              <td>Break</td>
+            </tr>
+            <tr>
+              <td class="time">15:00 - 16:30</td>
+              <td>AWS WAF로 구현하는 선제적 보안 가이드 – 봇 트래픽과 fraud 대응 베스트 프랙티스<br><span class="speaker">주윤홍 / Sr. Edge GTM Specialist SA</span></td>
+            </tr>
+            <tr>
+              <td class="time">16:30 - 17:00</td>
+              <td>Q&A 및 클로징</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Information -->
+      <section class="info-section">
+        <h2>Information</h2>
+        <ul class="info-list">
+          <li>본 행사는 AWS 고객을 대상으로 하며, 사전 등록 후 확정되신 분에 한해 참석 가능합니다.</li>
+          <li>좌석이 한정되어 있어 조기 마감될 수 있습니다.</li>
+          <li>주차 지원이 어려우므로 대중교통 이용을 권장드립니다.</li>
+        </ul>
+      </section>
+    </section>
+  </div>
+</body>
+</html>
